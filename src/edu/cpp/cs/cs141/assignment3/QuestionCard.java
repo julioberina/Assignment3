@@ -10,5 +10,8 @@ package edu.cpp.cs.cs141.assignment3;
  * @author Julio
  */
 public class QuestionCard extends Card {
-    
+    public QuestionCard()
+    {
+        super("?");
+    }
 }

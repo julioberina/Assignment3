@@ -10,5 +10,10 @@ package edu.cpp.cs.cs141.assignment3;
  * @author Julio
  */
 public abstract class Card {
+    private final String symbol;
     
+    public Card(String symbol)
+    {
+        this.symbol = symbol;
+    }
 }

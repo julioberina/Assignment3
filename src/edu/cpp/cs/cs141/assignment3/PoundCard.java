@@ -11,4 +11,8 @@ package edu.cpp.cs.cs141.assignment3;
  */
 public class PoundCard extends Card {
     
+    public PoundCard()
+    {
+        super("#");
+    }
 }

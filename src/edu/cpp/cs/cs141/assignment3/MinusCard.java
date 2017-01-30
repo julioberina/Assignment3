@@ -11,4 +11,8 @@ package edu.cpp.cs.cs141.assignment3;
  */
 public class MinusCard extends Card {
     
+    public MinusCard()
+    {
+        super("-");
+    }
 }

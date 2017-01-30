@@ -11,4 +11,8 @@ package edu.cpp.cs.cs141.assignment3;
  */
 public class SlashCard extends Card {
     
+    public SlashCard()
+    {
+        super("/");
+    }
 }
