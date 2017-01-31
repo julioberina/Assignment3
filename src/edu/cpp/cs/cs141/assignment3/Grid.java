@@ -14,6 +14,7 @@ import java.util.Collections;
  * @author Julio
  */
 public class Grid {
+    
     private String[][] gridLayout;
     private List<Card> cards;
     
@@ -57,17 +58,8 @@ public class Grid {
         for (int x = 0; x < 5; x++) { Collections.shuffle(cards); }
     }
     
-    public void display()
+    public String[][] getLayout()
     {
-        for (int x = 0; x < 4; x++)
-        {
-            for (int y = 0; y < 4; y++)
-            {
-                if (y == 3)
-                    System.out.println(gridLayout[x][y]);
-                else
-                    System.out.print(gridLayout[x][y] + "\t");
-            }
-        }
+        return gridLayout;
     }
 }
