@@ -10,5 +10,10 @@ package edu.cpp.cs.cs141.assignment3;
  * @author Julio
  */
 public class GameEngine {
+    private int moveCount;
     
+    public GameEngine()
+    {
+        moveCount = 0;
+    }
 }

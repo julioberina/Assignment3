@@ -5,6 +5,8 @@
  */
 package edu.cpp.cs.cs141.assignment3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Julio
@@ -12,14 +14,19 @@ package edu.cpp.cs.cs141.assignment3;
 public class MemoryUI {
     
     private GameEngine engine;
+    private Scanner scan;
     
     public MemoryUI(GameEngine engine)
     {
         this.engine = engine;
+        scan = new Scanner(System.in);
     }
     
     public void run()
     {
-        
+        System.out.println("Welcome to Memory! Press Enter to play: ");
+        scan.nextLine();
     }
+    
+    
 }
