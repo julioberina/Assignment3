@@ -10,10 +10,22 @@ package edu.cpp.cs.cs141.assignment3;
  * @author Julio
  */
 public abstract class Card {
+    
     private final String symbol;
+    private boolean flipped;
     
     public Card(String symbol)
     {
         this.symbol = symbol;
+    }
+    
+    public void flip()
+    {
+        flipped = true;
+    }
+    
+    public boolean isFlipped()
+    {
+        return flipped;
     }
 }
