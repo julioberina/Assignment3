@@ -58,6 +58,11 @@ public class Grid {
         for (int x = 0; x < 5; x++) { Collections.shuffle(cards); }
     }
     
+    public List<Card> getCards()
+    {
+        return cards;
+    }
+    
     public String[][] getLayout()
     {
         return gridLayout;

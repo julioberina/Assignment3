@@ -28,4 +28,14 @@ public abstract class Card {
     {
         return flipped;
     }
+    
+    public void unflip()
+    {
+        flipped = false;
+    }
+    
+    public String getSymbol()
+    {
+        return symbol;
+    }
 }
