@@ -20,11 +20,33 @@ import java.util.Collections;
  *
  * @author Julio
  */
+
+/**
+ * This class represents the {@link Grid} that will display all {@link Card}s
+ * face-down and assign them a number based on their order in the layout of
+ * the grid ({@link #gridLayout}).
+ */
 public class Grid {
     
+    /**
+     * This field is a multidimensional array that represents how the 
+     * {@link Grid} will be layed out and display to the screen by the
+     * {@link MemoryUI}.
+     */
     private String[][] gridLayout;
+    
+    /**
+     * This field represents a list of all {@link Card} types that is utilized
+     * to display the symbolic representation of the {@link Card} or an 
+     * empty string if nullified instead of its numeric order via the 
+     * {@link #gridLayout}.
+     */
     private List<Card> cards;
     
+    /**
+     * This is the default constructor for the class, which develops the
+     * {@link #gridLayout} and initialize the {@link #cards}.
+     */
     public Grid()
     {
         gridLayout = new String[4][4];
@@ -38,6 +60,10 @@ public class Grid {
         initializeCards();
     }
     
+    /**
+     * This method initialize {@link #cards} by adding two {@link Card}s of
+     * each type to {@link #cards} and shuffles it 5 times.
+     */
     public void initializeCards()
     {
         cards = new ArrayList<Card>();
@@ -65,11 +91,21 @@ public class Grid {
         for (int x = 0; x < 5; x++) { Collections.shuffle(cards); }
     }
     
+    /**
+     * This methods simply returns the list of cards.
+     * 
+     * @return The {@link #cards} list. 
+     */
     public List<Card> getCards()
     {
         return cards;
     }
     
+    /**
+     * This method returns the two-dimensional layout of the {@link Grid}.
+     * 
+     * @return two-dimensional array representation of a {@link Grid}.
+     */
     public String[][] getLayout()
     {
         return gridLayout;

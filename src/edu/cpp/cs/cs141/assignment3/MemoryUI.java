@@ -19,17 +19,42 @@ import java.util.List;
  *
  * @author Julio
  */
+
+/**
+ * This class is the user interface, which gathers input from the user and
+ * displays entities of the game to the screen.
+ */
 public class MemoryUI {
     
+    /**
+     * This field represents an instance of {@link GameEngine}, which is
+     * responsible for tasks like tracking game state and holding entities.
+     */
     private GameEngine engine;
+    
+    /**
+     * This field represents an object that is responsible for obtaining
+     * user input.
+     */
     private Scanner scan;
     
+    /**
+     * This is the default constructor for the class, which takes a
+     * {@link GameEngine} object and instantiates both the {@link GameEngine}
+     * and the scanner.
+     * 
+     * @param engine The instance of the {@link GameEngine}.
+     */
     public MemoryUI(GameEngine engine)
     {
         this.engine = engine;
         scan = new Scanner(System.in);
     }
     
+    /**
+     * This methods represents the game loop, which runs until the condition
+     * that terminates the game occurs.
+     */
     public void run()
     {
         System.out.println("Welcome to Memory! Press Enter to play: ");
@@ -48,6 +73,11 @@ public class MemoryUI {
                 engine.getMoveCount() + " moves!\n");
     }
     
+    /**
+     * This method is responsible for allowing the user to pick two 
+     * {@link Card}s through user input (STDIN) and "flipping" them to see
+     * if they match.
+     */
     public void makeMove()
     {
         int pick1 = flipFirstCard();
@@ -73,6 +103,13 @@ public class MemoryUI {
         engine.nextMove();
     }
     
+    /**
+     * This method allows the user to input a number in the {@link Grid} which 
+     * represents the first {@link Card} of their choice and "flips" 
+     * that {@link Card}.
+     * 
+     * @return number of the card
+     */
     public int flipFirstCard()
     {
         int pick1 = -1;
@@ -92,6 +129,14 @@ public class MemoryUI {
         return pick1;
     }
     
+    /**
+     * This method allows the user to input a number in the {@link Grid} which 
+     * represents the first {@link Card} of their choice and "flips" 
+     * that {@link Card}.
+     * 
+     * @param prevPick The number chosen from {@link #flipFirstCard}.
+     * @return number of the card
+     */
     public int flipSecondCard(int prevPick)
     {
         int pick2 = -1;
@@ -113,6 +158,11 @@ public class MemoryUI {
         return pick2;
     }
     
+    /**
+     * Displays the {@link Grid} onto the screen by using one for-loop and
+     * a bit of mathematical trickery to output the row and column of each
+     * grid item or an empty string if the item was matched with another card.
+     */
     public void displayGrid()
     {
         String[][] grid = engine.getGrid().getLayout();

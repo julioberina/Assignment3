@@ -16,8 +16,18 @@ package edu.cpp.cs.cs141.assignment3;
  *
  * @author Julio
  */
+
+/**
+ * This class represents a subclass of {@link Card}, which inherits all the
+ * attributes of a card and assigns to itself the symbol {@code *}.
+ */
 public class StarCard extends Card {
-    
+   
+    /**
+     * The default constructor for the class {@link StarCard}, which supplies an
+     * argument to {@link Card} that is its symbolic representation as a
+     * real-life card.
+     */
     public StarCard()
     {
         super("*");
